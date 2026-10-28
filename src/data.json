@@ -1,0 +1,45 @@
+{
+  "models": [
+    {"model_id": 1, "name": "VR-One"},
+    {"model_id": 2, "name": "VR-One Pro"}
+  ],
+  "check_items": [
+    {"item_id": 1, "model_id": 1, "name": "Внешний осмотр корпуса и линз"},
+    {"item_id": 2, "model_id": 1, "name": "Комплектность"},
+    {"item_id": 3, "model_id": 1, "name": "Дисплеи: битые пиксели"},
+    {"item_id": 4, "model_id": 1, "name": "Оптика: межзрачковое расстояние"},
+    {"item_id": 5, "model_id": 2, "name": "Внешний осмотр корпуса и линз"},
+    {"item_id": 6, "model_id": 2, "name": "Комплектность"},
+    {"item_id": 7, "model_id": 2, "name": "Дисплеи: битые пиксели"},
+    {"item_id": 8, "model_id": 2, "name": "Отслеживание положения"}
+  ],
+  "helmets": [
+    {"serial": "VR1-0001", "model_id": 1, "batch": "P-10"},
+    {"serial": "VR1-0002", "model_id": 1, "batch": "P-10"},
+    {"serial": "VRP-0001", "model_id": 2, "batch": "P-11"}
+  ],
+  "acts": [
+    {"act_id": 1, "serial": "VR1-0001", "date": "2026-10-20", "inspector": "Петров И. С.", "decision": "годен"},
+    {"act_id": 2, "serial": "VR1-0002", "date": "2026-10-21", "inspector": "Петров И. С.", "decision": "брак"},
+    {"act_id": 3, "serial": "VRP-0001", "date": "2026-10-22", "inspector": "Сидорова А. В.", "decision": "брак"},
+    {"act_id": 4, "serial": "VRP-0001", "date": "2026-10-24", "inspector": "Сидорова А. В.", "decision": "годен"}
+  ],
+  "results": [
+    {"act_id": 1, "item_id": 1, "passed": true,  "defect": ""},
+    {"act_id": 1, "item_id": 2, "passed": true,  "defect": ""},
+    {"act_id": 1, "item_id": 3, "passed": true,  "defect": ""},
+    {"act_id": 1, "item_id": 4, "passed": true,  "defect": ""},
+    {"act_id": 2, "item_id": 1, "passed": true,  "defect": ""},
+    {"act_id": 2, "item_id": 2, "passed": true,  "defect": ""},
+    {"act_id": 2, "item_id": 3, "passed": false, "defect": "3 битых пикселя на левом дисплее"},
+    {"act_id": 2, "item_id": 4, "passed": true,  "defect": ""},
+    {"act_id": 3, "item_id": 5, "passed": false, "defect": "Царапина на правой линзе"},
+    {"act_id": 3, "item_id": 6, "passed": true,  "defect": ""},
+    {"act_id": 3, "item_id": 7, "passed": true,  "defect": ""},
+    {"act_id": 3, "item_id": 8, "passed": true,  "defect": ""},
+    {"act_id": 4, "item_id": 5, "passed": true,  "defect": ""},
+    {"act_id": 4, "item_id": 6, "passed": true,  "defect": ""},
+    {"act_id": 4, "item_id": 7, "passed": true,  "defect": ""},
+    {"act_id": 4, "item_id": 8, "passed": true,  "defect": ""}
+  ]
+}
