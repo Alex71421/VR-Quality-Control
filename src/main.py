@@ -2,15 +2,35 @@ import json
 import sys
 
 
+def get_or_add_employee(data, full_name):
+    """Находит сотрудника по имени или добавляет его и возвращает номер."""
+    employees = data["employees"]
+    for employee_id, name in employees.items():
+        if name == full_name:
+            return employee_id
+
+    employee_id = max(employees, default=0) + 1
+    employees[employee_id] = full_name
+    return employee_id
+
+
 def load_data(path):
-    """Читает данные из json'а и кладет шлемы в словарь по серийке"""
+    """Читает JSON и подготавливает словари шлемов и сотрудников."""
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
+
     helmets = {}
     for h in data["helmets"]:
         helmets[h["serial"]] = h
     data["helmets"] = helmets
+
+    employees = {}
+    for employee in data["employees"]:
+        employees[employee["employee_id"]] = employee["full_name"]
+    data["employees"] = employees
+
     return data
+
 
 def register_helmet(data, serial, model_id, batch):
     """Операция для добавления шлема по серийнику"""
@@ -20,11 +40,14 @@ def register_helmet(data, serial, model_id, batch):
     data["helmets"][serial] = {"serial": serial, "model_id": model_id, "batch": batch}
     return True
 
+
 def create_act(data, serial, date, inspector):
     """Создает новый акт контроля для шлема и возвращает его номер"""
     act_id = len(data["acts"]) + 1
-    data["acts"].append({"act_id": act_id, "serial": serial, "date": date, "inspector": inspector, "decision": None})
+    inspector_id = get_or_add_employee(data, inspector)
+    data["acts"].append({"act_id": act_id, "serial": serial, "date": date, "inspector_id": inspector_id, "decision": None})
     return act_id
+
 
 def add_result(data, act_id, item_id, passed, defect=""):
     """Операция ввода результата одного пункта проверки"""
@@ -35,6 +58,7 @@ def add_result(data, act_id, item_id, passed, defect=""):
     data["results"].append({"act_id": act_id, "item_id": item_id, "passed": passed, "defect": defect})
     return True
 
+
 def decide(results):
     """Алгоритм 1. Решение по акту"""
     decision = "годен"
@@ -42,6 +66,7 @@ def decide(results):
         if not r["passed"]:
             decision = "брак"
     return decision
+
 
 def close_act(data, act_id):
     "Операця по выносу решения по акту и сохранения его"
@@ -51,6 +76,7 @@ def close_act(data, act_id):
         if a["act_id"] == act_id:
             a["decision"] = decision
     return decision
+
 
 def defect_statistics(models, acts, helmets, date_from, date_to):
     """Алгоритм 2. Брак по моделям за период"""
@@ -64,6 +90,7 @@ def defect_statistics(models, acts, helmets, date_from, date_to):
         stats.append((m["name"], defects))
     return stats
 
+
 def print_protocol(data, act_id):
     """Выводит протокол контроля по акту"""
     act = None
@@ -74,7 +101,8 @@ def print_protocol(data, act_id):
     for i in data["check_items"]:
         items[i["item_id"]] = i["name"]
     print("Протокол контроля, акт", act["act_id"])
-    print("Шлем:", act["serial"], " дата: ", act["date"], " контролер:", act["inspector"])
+    inspector = data["employees"][act["inspector_id"]]
+    print("Шлем:", act["serial"], " дата: ", act["date"], " контролер:", inspector)
     for r in data["results"]:
         if r["act_id"] == act_id:
             mark = "пройден"
@@ -82,6 +110,7 @@ def print_protocol(data, act_id):
                 mark = "Не пройден: " + r["defect"]
             print(items[r["item_id"]], "-", mark)
     print("Решение:", act["decision"])
+
 
 def main():
     # Для запуска нужно 2 аргумента
@@ -104,6 +133,7 @@ def main():
     print("Брак по моделям за 2026-10-20 - 2026-10-31:")
     for name, count in defect_statistics(data["models"], data["acts"], data["helmets"], "2026-10-20", "2026-10-31"):
         print(" ", name, "-", count)
+
 
 if __name__ == "__main__":
     main()

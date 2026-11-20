@@ -18,11 +18,15 @@
     {"serial": "VR1-0002", "model_id": 1, "batch": "P-10"},
     {"serial": "VRP-0001", "model_id": 2, "batch": "P-11"}
   ],
+  "employees": [
+    {"employee_id": 1, "full_name": "Петров И. С."},
+    {"employee_id": 2, "full_name": "Сидорова А. В."}
+  ],
   "acts": [
-    {"act_id": 1, "serial": "VR1-0001", "date": "2026-10-20", "inspector": "Петров И. С.", "decision": "годен"},
-    {"act_id": 2, "serial": "VR1-0002", "date": "2026-10-21", "inspector": "Петров И. С.", "decision": "брак"},
-    {"act_id": 3, "serial": "VRP-0001", "date": "2026-10-22", "inspector": "Сидорова А. В.", "decision": "брак"},
-    {"act_id": 4, "serial": "VRP-0001", "date": "2026-10-24", "inspector": "Сидорова А. В.", "decision": "годен"}
+    {"act_id": 1, "serial": "VR1-0001", "date": "2026-10-20", "inspector_id": 1, "decision": "годен"},
+    {"act_id": 2, "serial": "VR1-0002", "date": "2026-10-21", "inspector_id": 1, "decision": "брак"},
+    {"act_id": 3, "serial": "VRP-0001", "date": "2026-10-22", "inspector_id": 2, "decision": "брак"},
+    {"act_id": 4, "serial": "VRP-0001", "date": "2026-10-24", "inspector_id": 2, "decision": "годен"}
   ],
   "results": [
     {"act_id": 1, "item_id": 1, "passed": true,  "defect": ""},
