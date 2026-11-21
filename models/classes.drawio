@@ -1,0 +1,300 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="kt3-classes" name="Классы Java">
+    <mxGraphModel dx="1686" dy="1048" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1720" pageHeight="1280" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Main" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;Main&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ main(args: String[]): void {static}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="57" width="300" x="395" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JsonDataLoader" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;JsonDataLoader&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ load(path: Path): QualityControl&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="57" width="310" x="35" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Report" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;span&gt;«interface»&lt;br&gt;&lt;b&gt;Report&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ print(): void&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="73" width="225" x="833" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="TextReport" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;&lt;i&gt;TextReport&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- title: String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;# TextReport(title: String)&lt;br&gt;+ print(): void&lt;br&gt;# printBody(): void {abstract}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="117" width="310" x="1195" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QualityControl" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;QualityControl&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- models: Map&amp;lt;Integer, HelmetModel&amp;gt;&lt;br&gt;- checkItems: Map&amp;lt;Integer, CheckItem&amp;gt;&lt;br&gt;- helmets: Map&amp;lt;String, Helmet&amp;gt;&lt;br&gt;- employees: Map&amp;lt;Integer, Employee&amp;gt;&lt;br&gt;- acts: List&amp;lt;ControlAct&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ QualityControl(models: Map&amp;lt;Integer, HelmetModel&amp;gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;checkItems: Map&amp;lt;Integer, CheckItem&amp;gt;, helmets: Map&amp;lt;String, Helmet&amp;gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;employees: Map&amp;lt;Integer, Employee&amp;gt;, acts: List&amp;lt;ControlAct&amp;gt;)&lt;br&gt;+ registerHelmet(serial: String, modelId: int, batch: String): boolean&lt;br&gt;+ createAct(serial: String, date: String, inspectorName: String): ControlAct&lt;br&gt;- getOrAddEmployee(fullName: String): Employee&lt;br&gt;+ getCheckItem(itemId: int): CheckItem&lt;br&gt;+ getModels(): List&amp;lt;HelmetModel&amp;gt;&lt;br&gt;+ getActs(): List&amp;lt;ControlAct&amp;gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="277" width="515" x="35" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="InspectionProtocol" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;InspectionProtocol&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;- act: ControlAct&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;+ InspectionProtocol(act: ControlAct)&lt;br&gt;# printBody(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="101" width="340" x="820" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="DefectReport" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;DefectReport&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- models: List&amp;lt;HelmetModel&amp;gt;&lt;br&gt;- acts: List&amp;lt;ControlAct&amp;gt;&lt;br&gt;- dateFrom: String&lt;br&gt;- dateTo: String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ DefectReport(models: List&amp;lt;HelmetModel&amp;gt;, acts: List&amp;lt;ControlAct&amp;gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;dateFrom: String, dateTo: String)&lt;br&gt;# printBody(): void&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="165" width="430" x="1210" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="HelmetModel" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;HelmetModel&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- modelId: int&lt;br&gt;- name: String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ HelmetModel(modelId: int, name: String)&lt;br&gt;+ getModelId(): int&lt;br&gt;+ getName(): String&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="133" width="265" x="35" y="636" as="geometry" />
+        </mxCell>
+        <mxCell id="Helmet" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;Helmet&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;- serial: String&lt;br&gt;- model: HelmetModel&lt;br&gt;- batch: String&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;+ Helmet(serial: String, model: HelmetModel, batch: String)&lt;br&gt;+ getSerial(): String&lt;br&gt;+ getModel(): HelmetModel&lt;br&gt;+ getBatch(): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="165" width="365" x="340" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="ControlAct" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;ControlAct&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- actId: int&lt;br&gt;- helmet: Helmet&lt;br&gt;- date: String&lt;br&gt;- inspector: Employee&lt;br&gt;- results: List&amp;lt;CheckResult&amp;gt;&lt;br&gt;- decision: String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ ControlAct(actId: int, helmet: Helmet, date: String,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;inspector: Employee, decision: String)&lt;br&gt;+ getActId(): int&lt;br&gt;+ getHelmet(): Helmet&lt;br&gt;+ getDate(): String&lt;br&gt;+ getInspector(): Employee&lt;br&gt;+ getResults(): List&amp;lt;CheckResult&amp;gt;&lt;br&gt;+ getDecision(): String&lt;br&gt;+ addResult(item: CheckItem, passed: boolean, defect: String): boolean&lt;br&gt;- decide(): String&lt;br&gt;+ closeAct(): String&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="325" width="480" x="750" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="Employee" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;Employee&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- employeeId: int&lt;br&gt;- fullName: String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ Employee(employeeId: int, fullName: String)&lt;br&gt;+ getEmployeeId(): int&lt;br&gt;+ getFullName(): String&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="133" width="340" x="1275" y="691" as="geometry" />
+        </mxCell>
+        <mxCell id="CheckItem" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;CheckItem&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- itemId: int&lt;br&gt;- model: HelmetModel&lt;br&gt;- name: String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ CheckItem(itemId: int, model: HelmetModel, name: String)&lt;br&gt;+ getItemId(): int&lt;br&gt;+ getModel(): HelmetModel&lt;br&gt;+ getName(): String&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="165" width="385" x="35" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="CheckResult" parent="1" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;overflow=fill;fillColor=#FFFFFF;strokeColor=#334155;fontColor=#172033;fontFamily=Arial;fontSize=12;" value="&lt;div style=&quot;text-align: center; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; padding: 6px 8px; line-height: 16px;&quot;&gt;&lt;b&gt;CheckResult&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;- item: CheckItem&lt;br&gt;- passed: boolean&lt;br&gt;- defect: String&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-top: 1px solid rgb(51, 65, 85); padding: 6px 9px; line-height: 16px;&quot;&gt;&lt;span&gt;+ CheckResult(item: CheckItem, passed: boolean, defect: String)&lt;br&gt;+ getItem(): CheckItem&lt;br&gt;+ isPassed(): boolean&lt;br&gt;+ getDefect(): String&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="165" width="385" x="797.5" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="link-1" edge="1" parent="1" source="Helmet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="HelmetModel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-1-from" connectable="0" parent="link-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.82" y="-10" as="geometry">
+            <mxPoint x="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-1-to" connectable="0" parent="link-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.82" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-2" edge="1" parent="1" source="CheckItem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="HelmetModel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="167.5" y="930" />
+              <mxPoint x="167.5" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-2-from" connectable="0" parent="link-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.82" y="-10" as="geometry">
+            <mxPoint y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-2-to" connectable="0" parent="link-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.7778" y="-10" as="geometry">
+            <mxPoint y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-3" edge="1" parent="1" source="ControlAct" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="Helmet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="702.5" />
+              <mxPoint x="740" y="702.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-3-from" connectable="0" parent="link-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.82" y="-10" as="geometry">
+            <mxPoint x="-6" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-3-to" connectable="0" parent="link-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" y="-10" as="geometry">
+            <mxPoint x="-4" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-4" edge="1" parent="1" source="ControlAct" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="Employee">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-4-from" connectable="0" parent="link-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.82" y="-10" as="geometry">
+            <mxPoint x="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-4-to" connectable="0" parent="link-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.82" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-5" edge="1" parent="1" source="ControlAct" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;startArrow=diamond;startFill=1;endArrow=none;" target="CheckResult">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-5-from" connectable="0" parent="link-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-5-to" connectable="0" parent="link-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-6" edge="1" parent="1" source="CheckResult" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="CheckItem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-6-from" connectable="0" parent="link-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.82" y="-10" as="geometry">
+            <mxPoint x="17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-6-to" connectable="0" parent="link-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.82" y="-10" as="geometry">
+            <mxPoint x="-23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-7" edge="1" parent="1" source="InspectionProtocol" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="ControlAct">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="450" />
+              <mxPoint x="940" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-7-from" connectable="0" parent="link-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.82" y="-10" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-7-to" connectable="0" parent="link-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.82" y="-10" as="geometry">
+            <mxPoint y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-8" edge="1" parent="1" source="DefectReport" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="HelmetModel">
+          <mxGeometry relative="1" x="0.0061" as="geometry">
+            <Array as="points">
+              <mxPoint x="1340" y="540" />
+              <mxPoint x="250" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-8-from" connectable="0" parent="link-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.8077" y="-10" as="geometry">
+            <mxPoint x="-4" y="-100" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-8-to" connectable="0" parent="link-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8086" y="-10" as="geometry">
+            <mxPoint x="-49" y="90" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-9" edge="1" parent="1" source="DefectReport" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="ControlAct">
+          <mxGeometry relative="1" x="-0.0609" as="geometry">
+            <Array as="points">
+              <mxPoint x="1390" y="570" />
+              <mxPoint x="990" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-9-from" connectable="0" parent="link-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.8197" y="-10" as="geometry">
+            <mxPoint y="-42" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-9-to" connectable="0" parent="link-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8087" y="-10" as="geometry">
+            <mxPoint x="-40" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-10" edge="1" parent="1" source="QualityControl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="HelmetModel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="550" />
+              <mxPoint x="180" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-10-to" connectable="0" parent="link-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.811" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-11" edge="1" parent="1" source="QualityControl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="CheckItem">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="333.5" />
+              <mxPoint x="20" y="1112.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-11-to" connectable="0" parent="link-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" y="-10" as="geometry">
+            <mxPoint y="58" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-12" edge="1" parent="1" source="QualityControl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="Helmet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="522.5" y="530" />
+              <mxPoint x="522.5" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-12-to" connectable="0" parent="link-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.5405" y="-10" as="geometry">
+            <mxPoint x="-2" y="24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-13" edge="1" parent="1" source="QualityControl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="Employee">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1445" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-13-to" connectable="0" parent="link-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.7993" y="-10" as="geometry">
+            <mxPoint y="102" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-14" edge="1" parent="1" source="QualityControl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=none;" target="ControlAct">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-14-to" connectable="0" parent="link-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=#FFFFFF;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.802" y="-10" as="geometry">
+            <mxPoint y="34" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-15" edge="1" parent="1" source="InspectionProtocol" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=block;endFill=0;" target="TextReport">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="230" />
+              <mxPoint x="1310" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-16" edge="1" parent="1" source="DefectReport" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=block;endFill=0;" target="TextReport">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1390" y="240" />
+              <mxPoint x="1390" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-17" edge="1" parent="1" source="InspectionProtocol" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=block;endFill=0;dashed=1;" target="Report">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="945.5" y="220" />
+              <mxPoint x="945.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-18" edge="1" parent="1" source="DefectReport" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=block;endFill=0;dashed=1;" target="Report">
+          <mxGeometry relative="1" x="0.119" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="10" />
+              <mxPoint x="945.5" y="10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-19" edge="1" parent="1" source="Main" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=open;endFill=0;dashed=1;" target="Report">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-20" edge="1" parent="1" source="Main" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=open;endFill=0;dashed=1;" target="JsonDataLoader">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-21" edge="1" parent="1" source="JsonDataLoader" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;endArrow=open;endFill=0;dashed=1;" target="QualityControl">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="160" />
+              <mxPoint x="190" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
