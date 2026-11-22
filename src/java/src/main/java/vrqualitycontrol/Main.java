@@ -1,10 +1,13 @@
 package vrqualitycontrol;
 
 import java.io.IOException;
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         if (args.length == 0) {
             System.out.println("Передайте путь к data.json.");
             return;
