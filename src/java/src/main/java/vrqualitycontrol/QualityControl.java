@@ -31,7 +31,11 @@ public class QualityControl {
     }
 
     public ControlAct createAct(String serial, String date, String inspectorName) {
-        int actId = acts.size() + 1;
+        int maxId = 0;
+        for (ControlAct existingAct : acts) {
+            maxId = Math.max(maxId, existingAct.getActId());
+        }
+        int actId = maxId + 1;
         Helmet helmet = helmets.get(serial);
         Employee inspector = getOrAddEmployee(inspectorName);
         ControlAct act = new ControlAct(actId, helmet, date, inspector, null);

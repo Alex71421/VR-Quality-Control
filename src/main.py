@@ -43,7 +43,10 @@ def register_helmet(data, serial, model_id, batch):
 
 def create_act(data, serial, date, inspector):
     """Создает новый акт контроля для шлема и возвращает его номер"""
-    act_id = len(data["acts"]) + 1
+    max_id = 0
+    for act in data["acts"]:
+        max_id = max(max_id, act["act_id"])
+    act_id = max_id + 1
     inspector_id = get_or_add_employee(data, inspector)
     data["acts"].append({"act_id": act_id, "serial": serial, "date": date, "inspector_id": inspector_id, "decision": None})
     return act_id
