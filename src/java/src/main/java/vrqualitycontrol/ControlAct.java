@@ -66,6 +66,10 @@ public class ControlAct {
     }
 
     public String closeAct() {
+        if (results.isEmpty()) {
+            return null;
+        }
+
         decision = decide();
         return decision;
     }

@@ -71,6 +71,9 @@ def decide(results):
 def close_act(data, act_id):
     "Операця по выносу решения по акту и сохранения его"
     act_results = [r for r in data["results"] if r["act_id"] == act_id]
+    if not act_results:
+        return None
+
     decision = decide(act_results)
     for a in data["acts"]:
         if a["act_id"] == act_id:
